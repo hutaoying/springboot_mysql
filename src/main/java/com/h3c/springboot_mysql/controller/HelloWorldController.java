@@ -1,8 +1,8 @@
 package com.h3c.springboot_mysql.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 public class HelloWorldController {
@@ -10,4 +10,9 @@ public class HelloWorldController {
     public String index() {
         return "hutaoying";
     }
+    @PostMapping("/index1")
+    public Map index1(@RequestBody Map map){
+        return map;
+    }
+
 }
